@@ -93,20 +93,23 @@ export const LargeNumberOfUsers: Story = {
     const secondRow = args.users?.slice(25, 50) || []
 
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-          {firstRow.map((user) => (
-            <div key={user.id}>
-              <Avatar key={user.id} username={user.name} src={user.avatarUrl || undefined} />
-            </div>
-          ))}
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-          {secondRow.map((user) => (
-            <div key={user.id}>
-              <Avatar key={user.id} username={user.name} src={user.avatarUrl || undefined} />
-            </div>
-          ))}
+      <div>
+        <marquee style={{ color: 'red', fontSize: '3em' }}>Test</marquee>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            {firstRow.map((user) => (
+              <div key={user.id}>
+                <Avatar key={user.id} username={user.name} src={user.avatarUrl || undefined} />
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            {secondRow.map((user) => (
+              <div key={user.id}>
+                <Avatar key={user.id} username={user.name} src={user.avatarUrl || undefined} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     )
